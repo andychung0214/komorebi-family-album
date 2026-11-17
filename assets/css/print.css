@@ -1,0 +1,15 @@
+@page{size:A4 portrait;margin:14mm}
+@media print {
+  html,body{background:#fff!important;color:#20271f!important}
+  body[data-page=photobook] #header,body[data-page=photobook] #footer,body[data-page=photobook] .skip,
+  body[data-page=photobook] .page-head,body[data-page=photobook] .book-customizer,body[data-page=photobook] .book-preview,
+  body[data-page=photobook] .toast{display:none!important}
+  body[data-page=photobook] main{padding:0;min-height:0}
+  body[data-page=photobook] .wrap{width:100%}
+  #print-book{display:block}
+  #print-book .book-sheet{min-height:240mm;width:100%;color:#20271f;background:#fff;border:0;box-shadow:none;animation:none;break-inside:avoid;break-after:page}
+  #print-book .book-sheet:last-child{break-after:auto}
+  #print-book h2,#print-book figcaption{color:#20271f}
+  #print-book .book-spread img{max-height:96mm}
+  #print-book .book-spread:is(.double,.four,.editorial){grid-template-columns:repeat(2,minmax(0,1fr))}
+}
